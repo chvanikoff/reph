@@ -13,5 +13,7 @@
   "plug": {:hex, :plug, "1.1.4"},
   "poison": {:hex, :poison, "1.5.2"},
   "poolboy": {:hex, :poolboy, "1.5.1"},
+  "porcelain": {:hex, :porcelain, "2.0.1"},
   "postgrex": {:hex, :postgrex, "0.11.1"},
-  "ranch": {:hex, :ranch, "1.2.1"}}
+  "ranch": {:hex, :ranch, "1.2.1"},
+  "std_json_io": {:hex, :std_json_io, "0.1.0"}}

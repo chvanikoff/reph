@@ -13,7 +13,8 @@ defmodule Reph do
       supervisor(Reph.Repo, []),
       # Here you could define other workers and supervisors as children
       # worker(Reph.Worker, [arg1, arg2, arg3]),
-      worker(Reph.Visitors, [])
+      worker(Reph.Visitors, []),
+      supervisor(Reph.ReactIO, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html

@@ -5,12 +5,15 @@ import reducers from "reducers";
 import WSActions from "actions/ws";
 
 
-export default function configureStore() {
+export default function configureStore(initialState) {
   const store = createStore(
     reducers,
+    initialState,
     applyMiddleware(thunkMiddleware),
   );
-  store.dispatch(WSActions.socket_connect());
-  store.dispatch(WSActions.channel_join("visitors"));
+  if (typeof window !== "undefined") {
+    store.dispatch(WSActions.socket_connect());
+    store.dispatch(WSActions.channel_join("visitors"));
+  }
   return store;
 }
