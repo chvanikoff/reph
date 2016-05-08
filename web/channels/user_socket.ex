@@ -2,7 +2,8 @@ defmodule Reph.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "rooms:*", Reph.RoomChannel
+  channel "visitors", Reph.VisitorsChannel
+
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
